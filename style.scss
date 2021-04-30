@@ -1,0 +1,162 @@
+$bgColor: #fbb03b;
+$textColor: #138073;
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: $bgColor;
+	font-family: sans-serif;
+}
+
+div#btnMenu {
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 60px;
+	height: 60px;
+	margin: 20px;
+	background-color: $textColor;
+	border: 2px solid $textColor;
+	border-radius: 50%;
+	z-index: 2;
+}
+
+div#btnMenu:hover {
+	cursor: pointer;
+}
+
+div#btnMenu svg {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+div#btnMenu svg rect {
+	fill: white;
+	transform-box: fill-box;
+}
+
+div#btnMenu svg .a {
+	transform: translate(10px, 12px);
+}
+
+body.clicked div#btnMenu svg .a {
+	transform: rotate(45deg) translate(18px, -1px);
+}
+
+div#btnMenu svg .b {
+	transform: translate(10px, 19px);
+}
+
+body.clicked div#btnMenu svg .b {
+	opacity: 0;
+}
+
+div#btnMenu svg .c {
+	transform: translate(10px, 26px);
+}
+
+body.clicked div#btnMenu svg .c {
+	transform: rotate(-45deg) translate(-10px, 27px);
+}
+
+nav#nav {
+	position: fixed;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	top: 0;
+	right: -200px;
+	width: 200px;
+	height: 100vh;
+	background-color: rgba(153, 153, 153, 0.534);
+	color: white;
+	transition: right 400ms;
+	z-index: 2;
+}
+
+#layout {
+	margin-top: 6em;
+}
+
+h1 {
+	//font-family: "Poppins", sans-serif;
+	font-weight: bold;
+	font-size: 1.6em;
+	text-align: center;
+	color: $textColor;
+	margin-top: 2em;
+	margin-bottom: 1.5em;
+}
+
+#form {
+	color: $textColor;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	form {
+		display: flex;
+		flex-direction: column;
+	}
+
+	#checkboxCont {
+		display: flex;
+		flex-direction: row;
+
+		#checkbox {
+			line-height: 2em;
+			height: 2em;
+			margin-right: 0.5em;
+		}
+	}
+
+	input {
+		height: 3em;
+		padding-left: 2em;
+		margin-bottom: 2em;
+
+		&::placeholder {
+			color: $textColor;
+		}
+	}
+
+	#dataMain {
+		line-height: 2em;
+		height: 2em;
+	}
+
+	#data {
+		text-decoration: underline;
+		line-height: 2em;
+		height: 2em;
+	}
+
+	.buttonCont {
+		display: flex;
+		justify-content: center;
+
+		#submit {
+			color: white;
+			background-color: #39b69f;
+			width: 10em;
+			height: 3em;
+			padding: 1em 2em;
+			border: none;
+		}
+	}
+}
+
+@media screen and (max-width: 900px) {
+	h1 {
+		text-align: right;
+		padding-right: 2em;
+	}
+}

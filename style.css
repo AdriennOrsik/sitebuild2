@@ -1,0 +1,207 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #fbb03b;
+  font-family: sans-serif;
+}
+
+div#btnMenu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 60px;
+  height: 60px;
+  margin: 20px;
+  background-color: #138073;
+  border: 2px solid #138073;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+div#btnMenu:hover {
+  cursor: pointer;
+}
+
+div#btnMenu svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+div#btnMenu svg rect {
+  fill: white;
+  transform-box: fill-box;
+}
+
+div#btnMenu svg .a {
+  -webkit-transform: translate(10px, 12px);
+          transform: translate(10px, 12px);
+}
+
+body.clicked div#btnMenu svg .a {
+  -webkit-transform: rotate(45deg) translate(18px, -1px);
+          transform: rotate(45deg) translate(18px, -1px);
+}
+
+div#btnMenu svg .b {
+  -webkit-transform: translate(10px, 19px);
+          transform: translate(10px, 19px);
+}
+
+body.clicked div#btnMenu svg .b {
+  opacity: 0;
+}
+
+div#btnMenu svg .c {
+  -webkit-transform: translate(10px, 26px);
+          transform: translate(10px, 26px);
+}
+
+body.clicked div#btnMenu svg .c {
+  -webkit-transform: rotate(-45deg) translate(-10px, 27px);
+          transform: rotate(-45deg) translate(-10px, 27px);
+}
+
+nav#nav {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 0;
+  right: -200px;
+  width: 200px;
+  height: 100vh;
+  background-color: rgba(153, 153, 153, 0.534);
+  color: white;
+  -webkit-transition: right 400ms;
+  transition: right 400ms;
+  z-index: 2;
+}
+
+#layout {
+  margin-top: 6em;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 1.6em;
+  text-align: center;
+  color: #138073;
+  margin-top: 2em;
+  margin-bottom: 1.5em;
+}
+
+#form {
+  color: #138073;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#form form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#form #checkboxCont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+#form #checkboxCont #checkbox {
+  line-height: 2em;
+  height: 2em;
+  margin-right: 0.5em;
+}
+
+#form input {
+  height: 3em;
+  padding-left: 2em;
+  margin-bottom: 2em;
+}
+
+#form input::-webkit-input-placeholder {
+  color: #138073;
+}
+
+#form input:-ms-input-placeholder {
+  color: #138073;
+}
+
+#form input::-ms-input-placeholder {
+  color: #138073;
+}
+
+#form input::placeholder {
+  color: #138073;
+}
+
+#form #dataMain {
+  line-height: 2em;
+  height: 2em;
+}
+
+#form #data {
+  text-decoration: underline;
+  line-height: 2em;
+  height: 2em;
+}
+
+#form .buttonCont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#form .buttonCont #submit {
+  color: white;
+  background-color: #39b69f;
+  width: 10em;
+  height: 3em;
+  padding: 1em 2em;
+  border: none;
+}
+
+@media screen and (max-width: 900px) {
+  h1 {
+    text-align: right;
+    padding-right: 2em;
+  }
+}
+/*# sourceMappingURL=style.css.map */
